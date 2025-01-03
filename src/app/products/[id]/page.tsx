@@ -1,8 +1,5 @@
-import HeroSection from './components/HeroSection';
-import ProductSection from './components/ProductSection';
-import Categories from './components/Categories';
-import Testimonials from './components/Testimonial';
-import CallToAction from './components/CallToAction';
+import HeroSection from '../../components/HeroSection';
+import ProductSection from '../../components/ProductSection';
 
 type Product = {
   id: number;
@@ -23,10 +20,7 @@ export default async function HomePage() {
   return (
     <main>
       <HeroSection />
-      <Categories/>
-      <Testimonials/>
       <ProductSection products={products} />
-      <CallToAction/>
     </main>
   );
 }
