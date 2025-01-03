@@ -9,6 +9,7 @@
       "no-debugger": "off",
       "no-undef": "off",
       "no-alert": "off",
-      "react/no-unescaped-entities": "off"
+      "react/no-unescaped-entities": "off",
+      "@typescript-eslint/no-explicit-any": "off"
     }
   }
