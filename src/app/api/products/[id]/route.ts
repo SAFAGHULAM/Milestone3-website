@@ -3,7 +3,7 @@ import { products } from '../../../data/product';
 
 export async function GET(
   req: Request,
-  { params }: { params: { id: any } }
+  { params }: { params: { id: string } }
 ) {
   const { id } = params; // Extract dynamic route parameter
   const product = products.find((p) => p.id === parseInt(id, 10)); // Parse id to number
