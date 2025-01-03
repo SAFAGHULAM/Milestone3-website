@@ -1,14 +1,11 @@
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 import { products } from '../../../data/product';
 
-export async function GET(
-  req: NextRequest,
-  context: { params: { id: string } }
-) {
+export async function GET(req: Request, context: { params: Record<string, string> }) {
   const { id } = context.params;
 
-  // Validate the product ID
-  const productId = Number(id);
+  // Convert ID to a number
+  const productId = parseInt(id, 10);
   if (isNaN(productId)) {
     return NextResponse.json({ message: 'Invalid product ID' }, { status: 400 });
   }
